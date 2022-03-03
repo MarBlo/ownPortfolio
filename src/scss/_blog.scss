@@ -1,0 +1,63 @@
+.blog {
+  padding-bottom: 2rem;
+
+  &__image {
+    height: 40vh;
+    width: 100%;
+    background:
+    // /* the pic is too bright, add some gradient */
+      // linear-gradient(to right, rgba(black, 0.6), rgba(black, 0.6)),
+      // url("../img/_N9M7338.jpg") center top;
+      url("../img/photo-1512850183-6d7990f42385_malteSchmidt.jpeg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    .text-secondary {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-css-grid {
+    margin: 5rem 5rem 2rem 5rem;
+
+    --min: 20ch;
+    --gap: 5rem;
+
+    display: grid;
+    grid-gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(var(--min), 1fr));
+  }
+
+  &-card-component {
+    // --img-ratio: 3/2;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 0.5rem rgba(120, 120, 120, 0.95);
+    border-radius: 0.5rem;
+    height: 40vh;
+
+    > img {
+      // height: calc(max(28vh, 12rem));
+      object-fit: cover;
+      height: 30%;
+      width: 100%;
+    }
+    > a {
+      margin: 2rem 1rem 0 1rem;
+    }
+    > p {
+      margin: 2rem 1rem 0 1rem;
+    }
+    > p:last-child {
+      margin-bottom: 1rem;
+    }
+  }
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+  }
+}
