@@ -1,0 +1,26 @@
+---
+title: First Blog Trial
+layout: "base.njk"
+---
+
+<section class="blog">
+  <div class="blog__image">
+    <h1 class="text-secondary">My Blog</h1>
+  </div>
+
+  <div>
+    <ul data-component class="blog-css-grid">
+      {%- for post in collections.posts -%}
+      <li data-component class="blog-card-component">
+        <img src="{{ post.data.image }}" alt="" />
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+        <p>{{ post.data.teaser }}</p>
+        <p>{{ post.date | readableDate }}</p>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+
+    {% include "socialIcons.html" %}
+  <footer>&copy; Copyright 2022</footer>
+</section>

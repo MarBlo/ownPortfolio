@@ -1,0 +1,18 @@
+---
+title: Posts
+layout: "base.njk"
+---
+
+<section class="posts">
+    <div class="hero">
+        {% if image %}
+            <img src="{{ image }}" >
+        {% endif %}
+        <h1 class="text-secondary">{{ title }}</h1>
+    </div>
+
+ 
+    <div class="text">
+        {{ content }}
+    </div>
+</section>
